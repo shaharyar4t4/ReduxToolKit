@@ -1,12 +1,10 @@
-import { View } from "react-native";
+import Navigation from "./stack/Navigation";
 
 
 export default function RootLayout() {
 
 
   return (
-     <View>
-      
-     </View>
+     <Navigation/>
   );
 }

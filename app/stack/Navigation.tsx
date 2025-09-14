@@ -15,7 +15,7 @@ export type RootStackParamList = {
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-const Allscreen = () => {
+const Navigation = () => {
   return (
     <MainLayout>
       <Stack.Navigator initialRouteName={"Home"} screenOptions={{
@@ -31,4 +31,4 @@ const Allscreen = () => {
   )
 }
 
-export default Allscreen
+export default Navigation
