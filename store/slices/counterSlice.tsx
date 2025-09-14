@@ -20,6 +20,8 @@ export const counterSlice = createSlice({
       // immutable state based off those changes
       state.value += 1
     },
+
+    
     // decrement: (state) => {
     //   state.value -= 1
     // },
@@ -27,6 +29,7 @@ export const counterSlice = createSlice({
     //   state.value += action.payload
     // },
   },
+ 
 })
 
 // Action creators are generated for each case reducer function

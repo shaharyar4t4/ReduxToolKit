@@ -1,17 +1,26 @@
+import { RootState } from '@/store/Store';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React from 'react';
-import { Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import { useSelector } from 'react-redux';
 import { RootStackParamList } from '../stack/Navigation';
 
-type PropsType = NativeStackScreenProps<RootStackParamList, "Profile">;
+type PropsType = NativeStackScreenProps<RootStackParamList, 'Profile'>;
 
+const Profile = ({}: PropsType) => {
+  const value = useSelector((state: RootState) => state.passVariable.value);
+  console.log('-> value in profile ', value);
 
-const Profile = ({navigation}: PropsType) => {
   return (
-    <View>
-        <Text>Profile</Text>
+    <View style={styles.container}>
+      <Text style={styles.text}>Name: {value}</Text>
     </View>
-  )
-}
+  );
+};
 
-export default Profile
+const styles = StyleSheet.create({
+  container: { flex: 1, justifyContent: 'center', alignItems: 'center' },
+  text: { fontSize: 20, fontWeight: 'bold' },
+});
+
+export default Profile;

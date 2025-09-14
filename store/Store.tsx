@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { counterSlice } from './slices/counterSlice'
+import { passVariableSlice } from './slices/PassVariable'
 
 export const store = configureStore({
   reducer: {
     counterSlice: counterSlice.reducer,
+    passVariable:passVariableSlice.reducer,
   },
 })
 

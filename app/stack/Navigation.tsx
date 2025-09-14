@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import About from '../screen/About';
 import Home from '../screen/Home';
+import Profile from '../screen/Profile';
 
 
 //this is the root stack param list which tranfer the another data 
@@ -24,6 +25,7 @@ const Navigation = () => {
       }}>
         <Stack.Screen name="Home" component={Home}/>
         <Stack.Screen name="About" component={About} />
+        <Stack.Screen name="Profile" component={Profile} />
        
 
         </Stack.Navigator>
