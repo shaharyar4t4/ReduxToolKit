@@ -1,3 +1,4 @@
+import Cart from '@/components/Cart';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React from 'react';
 import { Text, View } from 'react-native';
@@ -8,7 +9,9 @@ type PropsType = NativeStackScreenProps<RootStackParamList, "Home">;
 
 const Home = ({navigation}: PropsType) => {
   return (
+    
     <View>
+      <Cart/>
         <Text>Home</Text>
     </View>
   )
